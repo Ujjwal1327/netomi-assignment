@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/iframeStyle.css" />
+  </head>
+  <body>
+    <div>
+      <p>Can you please provide your personal details?</p>
+      <form>
+        <label for="name">Name</label> <br />
+        <input type="text" name="name" id="name" /> <br />
+        <label for="date">Date of birth</label>
+        <input type="date" id="date" name="date" />
+        <br />
+        <label for="number">Contact Number</label>
+        <input type="number" name="number" id="number" /> <br />
+        <label for="country">Country</label>
+
+        <select name="country" id="country" onchange="showState(this.value)">
+          <option value=""></option>
+        </select>
+        <br />
+
+        <label for="state">State</label>
+        <select name="state" id="state"></select>
+        <br />
+        <label for="email">Your email</label>
+        <input
+          type="email"
+          name="email"
+          pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+          id="email"
+        />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <script src="../script/iframeScript.js"></script>
+  </body>
+</html>
